@@ -80,12 +80,12 @@ html,body{
     gap: 2rem;
 }
 #heroleft{
-    min-width: 300px;
+    min-width: 280px;
     flex: 1;
 }
 #heroleft .elem{
     position: relative;
-    height: clamp(50px, 9vw, 120px);
+    height: clamp(40px, 9vw, 120px);
     overflow: hidden;
 }
 #heroleft .elem h1:nth-child(1){
@@ -99,14 +99,14 @@ html,body{
     font-family: "kajiro";
     color: #fff;
     font-weight: 100;
-    font-size: clamp(40px, 11vw, 130px);
+    font-size: clamp(32px, 11vw, 130px);
 }
 #heroleft button{
     pointer-events: all;
-    padding: clamp(8px, 0.8vw, 15px) clamp(20px, 3vw, 40px);
-    font-size: clamp(20px, 3vw, 36px);
+    padding: clamp(6px, 0.8vw, 15px) clamp(16px, 3vw, 40px);
+    font-size: clamp(16px, 3vw, 36px);
     font-family: 'kajiro';
-    margin-top: clamp(15px, 2vw, 30px);
+    margin-top: clamp(12px, 2vw, 30px);
     cursor: pointer;
 }
 
@@ -114,26 +114,26 @@ html,body{
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    width: clamp(280px, 17%, 400px);
+    width: clamp(250px, 17%, 400px);
     color: #fff;
 }
 #heroright p{
-    font-size: clamp(12px, 1vw, 14px);
+    font-size: clamp(11px, 1vw, 14px);
     text-align: right;
     font-weight: 300;
 }
 #heroright #imagediv{
     width: 100%;
-    height: clamp(120px, 20vw, 170px);
+    height: clamp(100px, 20vw, 170px);
     background-image: url(./images/mari-lezhava-q65bNe9fW-w-unsplash.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    margin-top: 20px;
-    margin-bottom: 30px;
+    margin-top: 15px;
+    margin-bottom: 25px;
 }
 #heroright p:nth-child(3){
-    margin-bottom: clamp(40px, 10vw, 100px);
+    margin-bottom: clamp(30px, 10vw, 100px);
 }
 
 @media (max-width: 768px) {
@@ -143,7 +143,8 @@ html,body{
     
     #nav {
         justify-content: center;
-        gap: 20px;
+        gap: 15px;
+        padding: 15px 0px;
     }
     
     #nleft, #nright {
@@ -154,12 +155,12 @@ html,body{
         flex-direction: column;
         align-items: center;
         text-align: center;
-        gap: 3rem;
+        gap: 2.5rem;
     }
     
     #heroright {
         align-items: center;
-        width: 90%;
+        width: 95%;
     }
     
     #heroright p {
@@ -168,15 +169,46 @@ html,body{
 }
 
 @media (max-width: 480px) {
+    #workingarea {
+        width: 92%;
+    }
+
+    #nav {
+        gap: 12px;
+        padding: 12px 0px;
+    }
+
     #nav img {
-        height: 30px;
+        height: 28px;
     }
     
     #nleft, #nright {
-        gap: 15px;
+        gap: 12px;
     }
     
     #nav a {
         font-size: 10px;
+    }
+
+    #heroleft {
+        min-width: 240px;
+    }
+
+    #heroleft .elem {
+        height: clamp(35px, 9vw, 100px);
+    }
+
+    #heroleft button {
+        padding: clamp(5px, 0.8vw, 12px) clamp(14px, 3vw, 35px);
+    }
+
+    #heroright {
+        width: 100%;
+    }
+
+    #heroright #imagediv {
+        height: clamp(90px, 20vw, 150px);
+        margin-top: 12px;
+        margin-bottom: 20px;
     }
 }
