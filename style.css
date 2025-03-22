@@ -1,3 +1,7 @@
+@font-face {
+    font-family: 'kajiro';
+    src: url(./fonts/Kajiro\ Bold.ttf);
+}
 *{
     margin: 0;
     padding: 0;
@@ -36,7 +40,7 @@ html,body{
     position: relative;
     margin: 0 auto;
     height: 100vh;
-    width: 80%;
+    width: 90%;
     max-width: 1920px;
 }
 #nav{
@@ -45,14 +49,15 @@ html,body{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 #nav img{
-    height: 60px;
+    height: 40px;
 }
 #nleft,#nright{
     display: flex;
     align-items: center;
-    gap: 60px;
+    gap: 30px;
 }
 #nav a{
     pointer-events: all;
@@ -71,13 +76,16 @@ html,body{
     display: flex;
     justify-content: space-between;
     width: 100%;
+    flex-wrap: wrap;
+    gap: 2rem;
 }
 #heroleft{
-    min-width: 50%;
+    min-width: 300px;
+    flex: 1;
 }
 #heroleft .elem{
     position: relative;
-    height: 9vw;
+    height: clamp(50px, 9vw, 120px);
     overflow: hidden;
 }
 #heroleft .elem h1:nth-child(1){
@@ -91,31 +99,32 @@ html,body{
     font-family: "kajiro";
     color: #fff;
     font-weight: 100;
-    font-size: 11vw;
+    font-size: clamp(40px, 11vw, 130px);
 }
 #heroleft button{
     pointer-events: all;
-    padding: .8vw 3vw;
-    font-size: 3vw;
+    padding: clamp(8px, 0.8vw, 15px) clamp(20px, 3vw, 40px);
+    font-size: clamp(20px, 3vw, 36px);
     font-family: 'kajiro';
-    margin-top: 2vw;
+    margin-top: clamp(15px, 2vw, 30px);
+    cursor: pointer;
 }
 
 #heroright{
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    width: 17%;
+    width: clamp(280px, 17%, 400px);
     color: #fff;
 }
 #heroright p{
-    font-size: 14px;
+    font-size: clamp(12px, 1vw, 14px);
     text-align: right;
     font-weight: 300;
 }
 #heroright #imagediv{
     width: 100%;
-    height: 170px;
+    height: clamp(120px, 20vw, 170px);
     background-image: url(./images/mari-lezhava-q65bNe9fW-w-unsplash.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -124,16 +133,50 @@ html,body{
     margin-bottom: 30px;
 }
 #heroright p:nth-child(3){
-    margin-bottom: 100px;
+    margin-bottom: clamp(40px, 10vw, 100px);
 }
 
+@media (max-width: 768px) {
+    #workingarea {
+        width: 95%;
+    }
+    
+    #nav {
+        justify-content: center;
+        gap: 20px;
+    }
+    
+    #nleft, #nright {
+        gap: 20px;
+    }
+    
+    #hero {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 3rem;
+    }
+    
+    #heroright {
+        align-items: center;
+        width: 90%;
+    }
+    
+    #heroright p {
+        text-align: center;
+    }
+}
 
-
-
-
-
-
-
-
-
-
+@media (max-width: 480px) {
+    #nav img {
+        height: 30px;
+    }
+    
+    #nleft, #nright {
+        gap: 15px;
+    }
+    
+    #nav a {
+        font-size: 10px;
+    }
+}
